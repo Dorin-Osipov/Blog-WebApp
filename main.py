@@ -266,14 +266,9 @@ def about():
     return render_template("about.html", current_user=current_user)
 
 
-@app.route("/contact", methods=["GET", "POST"])
-def contact():
-    return render_template("contact.html", current_user=current_user)
-
-
 # Inclue the email sending code.
 
-MAIL_ADDRESS = os.environ.get("EMAIL_KEY")
+MAIL_ADDRESS = "dorinpython@gmail.com"
 MAIL_APP_PW = os.environ.get("PASSWORD_KEY")
 
 
@@ -295,4 +290,4 @@ def send_email(name, email, phone, message):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
