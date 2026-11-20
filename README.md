@@ -1,25 +1,11 @@
-# Blog-WebApp
+# Flask publishing app
 
-[Blog-WebApp](https://myblog-app-1fib.onrender.com) is a responsive web application designed for creating and managing blog posts. It provides a user-friendly interface for users to register, read blogs, and leave comments. The application is built with security in mind, allowing only admin accounts to add, edit, and delete posts. Regular user accounts are restricted to commenting on the blogs.
+Visitors can read articles, registered readers can comment, and an administrator can create, edit or remove posts. The app uses Flask, SQLAlchemy and server-rendered templates.
 
-## Features
+## Explore the implementation
 
-    User Registration: Users can create accounts to access the full features of the application.
+- [Application and data model](main.py) — the `BlogPost`, `User` and `Comment` models, sign-in routes and `admin_only` decorator.
+- [Forms](forms.py) — inputs for registration, editing posts and submitting comments.
+- [Article page](templates/post.html) — how an article and its comments are presented to readers.
 
-    Blog Management: Admin accounts have the privilege to add, edit, and delete blog posts.
-
-    Read Blogs: All users, whether registered or not, can read the blog posts on the website.
-
-    Commenting: Registered users can leave comments on the blog posts.
-    
-## Usage
-
-    User Registration: Navigate to the registration page and create a new account.
-
-    Log In: Log in with your credentials to access the full features based on your user role.
-
-    Read Blogs: Browse through the available blogs on the home page.
-
-    Leave Comments: If you are logged in, you can leave comments on the blog posts.
-
-    Admin Actions: Admins have additional actions such as adding, editing, and deleting blog posts.
+[Hosted app](https://myblog-app-1fib.onrender.com)
